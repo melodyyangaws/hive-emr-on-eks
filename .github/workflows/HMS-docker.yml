@@ -11,7 +11,7 @@ on:
   push:
     branches: [ main ]
     # Publish spark version tags as releases.
-    tags: [ 'v*.*.*' ]
+    # tags: [ 'v*.*.*' ]
   pull_request:
     branches: [ main ]
 
@@ -28,9 +28,9 @@ jobs:
     # strategy:
     #   matrix:
     #     version: [3.1.2]
-    # permissions:
-    #   contents: read
-    #   packages: write
+    permissions:
+      contents: read
+      packages: write
 
     steps:
       - name: Checkout repository
